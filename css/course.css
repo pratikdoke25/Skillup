@@ -1,0 +1,436 @@
+/* Courses Page */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 18px;
+    margin-left: 20px;
+    width: 98%;
+   }
+  
+   /* General Styling */
+  .elementGab {
+    margin-bottom: 20px;
+  }
+  
+  .elementGab h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .desc div,
+  .description div {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Syllabus Section */
+  .syllabusWrapper .title {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .card-header {
+    background-color: #FF6600;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-content {
+    display: none;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .card-header.active + .card-content {
+    display: block;
+  }
+  
+  /* Image Section */
+  .col-md-12 {
+    position: relative;
+    height: 370px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .minHeight370 {
+    height: 100%;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    /* Syllabus Cards */
+    .syllabusWrapper .title {
+        font-size: 20px;
+    }
+  
+    .card-header {
+        font-size: 16px;
+        padding: 10px;
+    }
+  
+    .card-content {
+        font-size: 14px;
+    }
+  
+    /* Text Resizing */
+    .elementGab h3 {
+        font-size: 20px;
+    }
+  
+    .desc div,
+    .description div {
+        font-size: 14px;
+    }
+  
+    /* Adjust Image Height */
+    .col-md-12 {
+        height: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Further size reduction for small screens */
+    .elementGab h3 {
+        font-size: 18px;
+    }
+  
+    .desc div,
+    .description div {
+        font-size: 13px;
+    }
+  
+    /* Image Section */
+    .col-md-12 {
+        height: 200px;
+    }
+  
+    .card-header {
+        font-size: 14px;
+    }
+  
+    .card-content {
+        font-size: 12px;
+    }
+  }
+  
+  
+   /* Box Styling */
+  .feeBox {
+    border: 2px solid #ddd;
+    padding: 20px;
+    background-color: #ffeccf; 
+    border-radius: 10px;
+    max-width: 100%; /* Responsive width */
+    margin: 15px auto;
+    text-align: left;
+    
+  }
+  
+  
+  /* Text Styling */
+  .feeBox h5 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .feeBox p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .feeBox a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .feeBox a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile Responsive Styling */
+  @media (max-width: 768px) {
+    .feeBox {
+        padding: 15px;
+        max-width: 100%;
+    }
+  
+    .feeBox h5 {
+        font-size: 16px;
+    }
+  
+    .feeBox p {
+        font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .feeBox {
+        padding: 10px;
+    }
+  
+    .feeBox h5 {
+        font-size: 14px;
+    }
+  
+    .feeBox p {
+        font-size: 12px;
+    }
+  }
+  
+  
+  
+  /*Why This Course */
+  /* Box Styling */
+  #WhyThisCourse .description {
+    background-color: #f9f9f9; /* Light background color for the box */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin-bottom: 20px; /* Space between boxes */
+  }
+  
+  #WhyThisCourse h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #FF6600; /* Dark color for headers */
+  }
+  
+  #WhyThisCourse p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; /* Slightly muted text color */
+  }
+  
+  /* List Styling */
+  #WhyThisCourse ol {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  #WhyThisCourse ol li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Responsive Design for Mobile View */
+  @media (max-width: 768px) {
+    /* Mobile adjustments */
+    #WhyThisCourse h2 {
+        font-size: 20px;
+    }
+  
+    #WhyThisCourse p,
+    #WhyThisCourse ol li {
+        font-size: 14px;
+    }
+  
+    /* Padding adjustments */
+    #WhyThisCourse .description {
+        padding: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Smaller screen adjustments */
+    #WhyThisCourse h2 {
+        font-size: 18px;
+    }
+  
+    #WhyThisCourse p,
+    #WhyThisCourse ol li {
+        font-size: 13px;
+    }
+  
+    /* Adjusting box padding for very small screens */
+    #WhyThisCourse .description {
+        padding: 10px;
+    }
+  }
+  
+  
+  /* Terms and Conditions Box Styling */
+  .terms_conditions {
+    background-color: #f9f9f9; /* Light background color for the box */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin-bottom: 20px; /* Space below the box */
+    text-align: center; /* Center align text and elements */
+    margin: 20px;
+  }
+  
+  .terms_conditions h5 {
+    font-size: 20px; /* Font size for the header */
+    margin-bottom: 15px; /* Space below the header */
+    color: #FF6600; /* Dark color for the header */
+  }
+  
+  .terms_conditions ul {
+    padding-left: 0; /* Remove padding for list */
+    margin: 10px 0; /* Margin above and below the list */
+    list-style-type: none; /* Remove default list bullets */
+  }
+  
+  .terms_conditions ul li {
+    font-size: 16px; /* Font size for list items */
+    line-height: 1.6; /* Line height for readability */
+    color: #555; /* Text color for list items */
+    margin-bottom: 10px; /* Space below each list item */
+  }
+  
+  .terms_conditions p {
+    font-size: 16px; /* Font size for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+    color: #555; /* Text color for paragraphs */
+    margin-top: 10px; /* Space above the paragraph */
+  }
+  
+  /* Responsive Design for Mobile View */
+  @media (max-width: 768px) {
+    .terms_conditions h5 {
+        font-size: 18px; /* Adjust header font size for mobile */
+    }
+  
+    .terms_conditions ul li {
+        font-size: 14px; /* Adjust list item font size for mobile */
+    }
+  
+    .terms_conditions p {
+        font-size: 14px; /* Adjust paragraph font size for mobile */
+    }
+  
+    /* Adjusting padding for smaller screens */
+    .terms_conditions {
+        padding: 15px; /* Padding inside the box */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .terms_conditions h5 {
+        font-size: 16px; /* Further adjust header font size for very small screens */
+    }
+  
+    .terms_conditions ul li {
+        font-size: 12px; /* Further adjust list item font size for very small screens */
+    }
+  
+    .terms_conditions p {
+        font-size: 12px; /* Further adjust paragraph font size for very small screens */
+    }
+  
+    /* Adjusting padding for very small screens */
+    .terms_conditions {
+        padding: 10px; /* Padding inside the box */
+    }
+  }
+  
+  
+  
+  /*---------------------------------Upcoming- page ---------------------------------*/
+  
+  /* Base Styles for the Upcoming Batches Section */
+  .eventsUpcomingBatchWrapper {
+    background-color: #f8f9fa; /* Light background color for the wrapper */
+    padding: 20px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners for the wrapper */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0; /* Margin to separate from other sections */
+  }
+  
+  /* Table Styles */
+  .table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders for better look */
+  }
+  
+  .table th, .table td {
+    padding: 12px; /* Padding for table cells */
+    text-align: left; /* Left align text */
+    border: 1px solid #dee2e6; /* Border for cells */
+  }
+  
+  .table th {
+    background-color: #FF6600; /* Header background color */
+    color: #fff; /* Header text color */
+    font-weight: bold; /* Bold text for headers */
+  }
+  
+  /* Animated Elements */
+  .animated {
+    transition: all 0.3s ease; /* Smooth transition for animated elements */
+  }
+  
+  /* New Tag Styles */
+  .newTag {
+    background-color: #28a745; /* Green background for the 'New' tag */
+    color: #fff; /* White text color */
+    padding: 2px 6px; /* Padding around the tag */
+    border-radius: 4px; /* Rounded corners for the tag */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .eventsUpcomingBatchWrapper {
+        padding: 15px; /* Adjust padding on smaller screens */
+    }
+    
+    .table th, .table td {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+  
+    /* Stack table cells vertically on smaller screens */
+    .table, .table tbody, .table tr, .table td {
+        display: block; /* Change display to block */
+        width: 100%; /* Full width */
+    }
+    
+    .table thead {
+        display: none; /* Hide the header on small screens */
+    }
+    
+    .table tr {
+        margin-bottom: 15px; /* Space between rows */
+        border: 1px solid #dee2e6; /* Add border around rows */
+        border-radius: 4px; /* Rounded corners for rows */
+        background-color: #ffffff; /* White background for each row */
+    }
+    
+    .table td {
+        text-align: right; /* Align text to the right */
+        padding: 10px; /* Adjust padding */
+        position: relative; /* Position relative for pseudo-element */
+    }
+  
+    .table td::before {
+        content: attr(data-label); /* Show header name as label */
+        position: absolute; /* Position absolutely */
+        left: 10px; /* Adjust left position */
+        font-weight: bold; /* Bold for labels */
+        color: #6c757d; /* Label color */
+    }
+  }
+  

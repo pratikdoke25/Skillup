@@ -1,0 +1,174 @@
+.footer {
+    background-color: #343a40; /* Keep this color */
+    padding: 20px 10px; /* Reduced padding for mobile */
+    margin-top: 90px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-info, .course-list {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    margin: 10px;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px;
+}
+
+.footer-title {
+    color:#FF6600; /* Change if you want a different color */
+    margin-bottom: 15px;
+    font-size: 1.3em; /* Reduced font size */
+    letter-spacing: 1px;
+}
+
+.footer-container p, a {
+    margin: 5px 0;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px; /* Reduced gap */
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: white; /* Ensure icons are not orange */
+    font-size: 1.3em; /* Slightly smaller icon size for mobile */
+}
+
+/* Input Styles */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure it takes full width of the parent */
+}
+
+/* Input styles */
+input[type="email"] {
+    flex-grow: 1; /* Make input take available space */
+    padding: 12px; /* Adjust padding */
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Space between input and button */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px; /* Larger font for readability */
+    min-width: 0; /* Prevent input from overflowing */
+}
+
+/* Button styles */
+button {
+    padding: 8px 12px; /* Adjust padding */
+    background-color: #FF6600; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Font size for button */
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+button:hover {
+    background-color: orange; /* Keep hover color */
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom-left {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.footer-bottom-right {
+    text-align: right;
+}
+
+.footer-bottom-right ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom-right a {
+    text-decoration: none;
+    color: white; /* Ensure no orange in footer links */
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-right a:hover {
+    color: #FF6600; /* Keep hover color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: flex-start;
+    }
+
+    .contact-info, .course-list {
+        color: aliceblue;
+        flex: 1 1 100%; /* Full width on mobile */
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .footer-bottom-right ul {
+        flex-direction: column; /* Stack links vertically */
+    }
+    .input-container {
+        flex-direction: column; /* Stack input and button vertically on mobile */
+    }
+    .newsletter input[type="email"] {
+        width: 100%; /* Full width input */
+        margin-right: 0;
+        margin-bottom: 10px; /* Spacing between input and button */
+    }
+
+    button {
+       margin-top: 10px;
+        width: 35%;
+    }
+
+    .footer-title {
+        font-size: 1.2em; /* Slightly smaller font */
+    }
+
+    p, a {
+        font-size: 0.9em; /* Smaller font */
+    }
+
+    .social-media a {
+        font-size: 1.2em; /* Adjust icon size */
+    }
+}
+
+/* Remove bullets from unordered lists */
+.course-list ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.course-list li {
+    margin: 5px 0; /* Optional: add some spacing between items */
+}

@@ -1,0 +1,201 @@
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black semi-transparent background */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1010;
+}
+
+/* Left section form */
+.left-section {
+    width: 100%; /* Adjust width for form */
+}
+
+/* Style adjustments */
+h2 {
+    color: #003366;
+}
+
+.whatsapp-btn {
+    background-color: white; /* Set background color to white */
+    color: black; /* Set text color to black */
+    padding: 10px;
+    border: 1px solid black; /* Black border */
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between text and image */
+    cursor: pointer;
+}
+
+.whatsapp-icon {
+    width: 32px; /* Increase icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+form {
+    margin-top: 10px;
+}
+
+/* Ensuring text fields have no margin-right */
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Remove margin on the last input and make sure phone input is aligned */
+.phone-input {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-input select, .phone-input input {
+    flex: 1; /* Distribute space equally */
+}
+
+form button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #002244;
+}
+
+/* Right section image */
+.right-section {
+    width: 30%; /* Adjust to accommodate image */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: flex-start;
+}
+
+.right-section img {
+    width: 100%;
+    border: 2px solid #003366; /* Border around the image */
+    border-radius: 8px;
+}
+
+/* Close button - move to the right corner */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+/* Responsive design *//* Mobile View - Adjustments for screens smaller than 480px */
+@media (max-width: 480px) {
+    /* Adjust modal content for smaller screens */
+    .modal-content {
+        width: 95%; /* Almost full width */
+        padding: 8px; /* Less padding */
+        flex-direction: column; /* Stack content vertically */
+        margin: 10% auto; /* Increase top margin */
+        box-shadow: none; /* Remove shadow for a cleaner look */
+    }
+
+    /* Adjust left section (form) for mobile */
+    .left-section {
+        width: 80%; /* Reduce width for the form section further */
+        margin: 0; /* Remove margin to ensure it fits well */
+        padding-left: 0; /* Eliminate left padding */
+        padding-right: 5px; /* Reduce right padding slightly */
+    }
+
+    /* Adjust right section (image) for mobile */
+    .right-section {
+        width: 80%; /* Reduce width for the image section */
+        justify-content: center; /* Center the image */
+        margin: 10px auto; /* Center the right section */
+    }
+
+    /* Resize the image in the right section */
+    .right-section img {
+        width: 60%; /* Further reduce the image size */
+        margin: 0 auto; /* Center the image */
+        display: block;
+        border-radius: 8px; /* Maintain border radius */
+    }
+
+    /* Make the close button slightly smaller */
+    .close {
+        font-size: 20px;
+        top: 5px;
+        right: 5px;
+    }
+
+    /* Adjust the form inputs and button */
+    form input, form select {
+        padding: 6px; /* Less padding for inputs */
+        margin: 4px 0; /* Consistent spacing between inputs */
+        font-size: 12px; /* Smaller font for better fit */
+    }
+
+    /* Adjust button size */
+    form button {
+        padding: 6px; /* Less padding for buttons */
+        font-size: 12px; /* Smaller font size for buttons */
+    }
+
+    /* Ensure the WhatsApp button fits well on small screens */
+    .whatsapp-btn {
+        font-size: 12px; /* Smaller text */
+        padding: 6px; /* Less padding */
+        gap: 6px; /* Smaller gap between text and icon */
+        justify-content: center; /* Center content */
+    }
+
+    /* Resize WhatsApp icon for mobile */
+    .whatsapp-icon {
+        width: 20px; /* Smaller icon */
+    }
+
+    /* Adjust phone input fields to fit mobile view */
+    .phone-input {
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 4px; /* Less space between the inputs */
+    }
+
+    /* Ensure modal itself is centered properly on mobile */
+    .modal {
+        justify-content: center; /* Center modal on screen */
+        align-items: center;
+    }
+}

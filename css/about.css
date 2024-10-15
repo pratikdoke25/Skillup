@@ -1,0 +1,285 @@
+.mission-vision-container {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Space between mission and vision */
+    margin: 20px; /* Margin around the container */
+}
+
+.mission-container,
+.vision-container {
+    background-color: #f4f4f4; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Reduced padding inside the containers */
+    width: 45%; /* Width of each container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin: 0 40px; /* Reduced left and right margins */
+}
+
+.mission-image,
+.vision-image {
+    max-width: 20%; /* Reduce image size further */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px auto; /* Center image with smaller margin */
+    display: block; /* Ensure image is a block element */
+    border-radius: 5px; /* Optional: round the corners of images */
+}
+
+.mission-container h2 {
+    color: #003366; /* Color for headings */
+    text-align: center; /* Center align the text */
+    padding-top: 20px;
+   
+}
+
+.mission-container p {
+    color: #333; /* Color for paragraph text */
+    text-align: center; /* Center align the text */
+}
+
+.vision-container h2 {
+    color: #003366; /* Color for headings */
+    text-align: center; /* Center align the text */
+    padding-top: 20px;
+   
+}
+.vision-container p {
+    color: #333; /* Color for paragraph text */
+    text-align: center; /* Center align the text */
+}
+
+
+#whyUsSection {
+    padding: 40px 0; /* Add padding around the section */
+    background-color: #f9f9f9; /* Light background color for contrast */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #003366; /* Dark blue color for the heading */
+}
+.container {
+    width: 100%; /* Adjust width as needed */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding inside the container */
+}
+.inner {
+    background-color: white; /* White background for inner elements */
+    border-radius: 8px; /* Rounded corners */
+    padding: 30px; /* Increased padding for more height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center the text inside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effects */
+}
+.inner:hover {
+    transform: translateY(-5px); /* Move the box up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.circle {
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.circle img {
+    max-width: 80px; /* Control the size of the images */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Animation for image hover */
+}
+
+.circle img:hover {
+    transform: scale(1.1); /* Scale the image on hover */
+}
+
+
+/* Journy of comany*/
+.growth-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.growth-steps {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between blocks */
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    position: relative;
+    padding-bottom: 20px;
+    gap: 20px; /* Added gap to ensure uniform spacing */
+}
+
+.step {
+    width: 200px; /* Make blocks larger */
+    padding: 30px; /* Increase padding for more content space */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    background-color: #e0f7fa; /* Change background color on hover */
+}
+
+.step .icon {
+    font-size: 50px; /* Slightly increase icon size */
+    color: #007bff;
+    margin-bottom: 10px;
+    margin-top:20px;
+}
+
+.step h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* Add lines between steps */
+.growth-steps::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #ddd;
+    z-index: 0;
+}
+
+/* Styles for numbers in the steps */
+.step-number {
+    position: absolute;
+    top: 10px; /* Adjusted top for more space */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    width: 35px; /* Slightly larger circle */
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Colors for each step icon */
+.step:nth-child(1) .icon {
+    color: #007bff; /* Blue */
+}
+
+.step:nth-child(2) .icon {
+    color: #f39c12; /* Orange */
+}
+
+.step:nth-child(3) .icon {
+    color: #e74c3c; /* Red */
+}
+
+.step:nth-child(4) .icon {
+    color: #3498db; /* Light Blue */
+}
+
+.step:nth-child(5) .icon {
+    color: #2ecc71; /* Green */
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Mission and Vision Container */
+    .mission-vision-container {
+        flex-direction: column; /* Stack items vertically */
+        margin: 10px; /* Adjust margin for mobile */
+    }
+
+    .mission-container,
+    .vision-container {
+        width: 90%; /* Full width on mobile */
+        margin: 10px auto; /* Center containers */
+    }
+
+    .mission-image,
+    .vision-image {
+        max-width: 50%; /* Slightly increase image size for better visibility */
+    }
+
+    /* Headings and Paragraphs */
+    .mission-container h2,
+    .vision-container h2 {
+        font-size: 22px; /* Larger font size for headings */
+    }
+
+    .mission-container p,
+    .vision-container p {
+        font-size: 14px; /* Adjust paragraph font size for readability */
+    }
+
+    /* Why Us Section */
+    #whyUsSection {
+        padding: 20px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust heading size for mobile */
+    }
+
+    /* Container */
+    .container {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .inner {
+        padding: 15px; /* Reduce padding for inner elements */
+    }
+
+    /* Growth Container */
+    .growth-container {
+        padding: 20px; /* Reduce padding */
+    }
+
+    /* Growth Steps */
+    .growth-steps {
+        flex-direction: column; /* Stack steps vertically on mobile */
+        overflow-x: hidden; /* Disable horizontal scroll */
+    }
+
+    .step {
+        width: 100%; /* Full width for steps */
+        margin: 10px 0; /* Space between steps */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .step .icon {
+        font-size: 40px; /* Adjust icon size */
+    }
+
+    .step h3 {
+        font-size: 18px; /* Smaller heading size */
+    }
+
+    .step p {
+        font-size: 14px; /* Smaller paragraph size */
+    }
+
+    /* Step Number */
+    .step-number {
+        width: 30px; /* Adjust circle size */
+        height: 30px; /* Adjust circle size */
+        font-size: 14px; /* Adjust font size */
+    }
+}

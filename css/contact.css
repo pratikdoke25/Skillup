@@ -1,0 +1,290 @@
+/* General styles for the contact section */
+.contact-area {
+    background-color: #f8f9fa;
+    padding: 130px 0;
+    position: relative;
+}
+
+.section-title h1 {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact-area .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-area iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-bg02 {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-bg02:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Section title styling */
+.section-title h2 {
+    font-size: 28px;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Contact form styling */
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #888;
+}
+
+/* Center the button and reduce the top margin */
+.slider-btn {
+    text-align: center;
+    margin-top: 15px; /* Reduced margin for better spacing */
+}
+
+/* Button styles */
+.slider-btn button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+}
+
+.slider-btn button:hover::before {
+    left: 100%;
+}
+
+.slider-btn button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Interactive hover effects for text fields */
+.contact-field input:hover,
+.contact-field textarea:hover {
+    background-color: #e6f7ff;
+}
+
+/* Modal success message styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Form field error handling */
+.contact-field input:invalid,
+.contact-field textarea:invalid {
+    border-color: #e74c3c;
+    background-color: #fdf2f2;
+}
+
+.contact-field input:valid,
+.contact-field textarea:valid {
+    border-color: #28a745;
+    background-color: #f2fdf2;
+}
+
+/* Result message */
+#result {
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Success message with icon */
+#success-message i {
+    margin-right: 10px;
+}
+
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .contact-area {
+        padding: 60px 20px; /* Reduced padding for mobile */
+    }
+
+    .section-title h1 {
+        font-size: 28px; /* Adjusted font size */
+        margin-bottom: 20px; /* Adjusted margin for better spacing */
+    }
+
+    .contact-area .container {
+        flex-direction: column; /* Stack the content vertically */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-bg02 {
+        padding: 20px; /* Reduced padding */
+        margin-bottom: 30px; /* Added spacing for mobile stacking */
+    }
+
+    .contact-area iframe {
+        width: 100%;
+        height: 250px; /* Set a fixed height for the iframe */
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        margin-top: 20px;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+        padding: 12px; /* Reduced padding for mobile */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .slider-btn {
+        margin-top: 10px; /* Reduced margin for better spacing */
+    }
+
+    .slider-btn button {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 90%; /* Set a responsive width for modals */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .modal-content h2 {
+        font-size: 20px; /* Adjusted font size */
+    }
+
+    .modal-content p {
+        font-size: 16px; /* Adjusted font size */
+    }
+}
+
+/* Extra small mobile devices (like iPhone SE or smaller screens) */
+@media (max-width: 480px) {
+    .contact-area {
+        padding: 40px 15px; /* Further reduced padding for extra small devices */
+    }
+
+    .section-title h1 {
+        font-size: 24px; /* Adjusted font size */
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .contact-bg02 {
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .contact-area iframe {
+        height: 200px; /* Set a fixed height for smaller devices */
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+        padding: 10px; /* Smaller padding */
+        font-size: 12px; /* Adjusted font size */
+    }
+
+    .slider-btn button {
+        padding: 8px 15px; /* Reduced padding */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .modal-content {
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .modal-content h2 {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .modal-content p {
+        font-size: 14px; /* Smaller font size */
+    }
+}
