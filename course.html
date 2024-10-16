@@ -20,10 +20,14 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-11gJH6/95dywLwncAt+z+0OsGP+jGzm8D8hXngH1MOhgf1BPOJ5HC35MjZgV1WQ7" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq8gUUnmcU9B6CxnJ3tF5LqYhbGLFay5XLOU4HoU1w+Fx/7D6d" crossorigin="anonymous"></script>
 
-    <!-- Customized Bootstrap Stylesheet -->
+   <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,7 +44,9 @@
                     <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
                     <div class="text-left">
                         <h6 class="font-weight-semi-bold mb-1">Our Office</h6>
-                        <small>Office No: 1, First Floor, Surabhi Complex, Chandan Nagar, Kharadi, Pune, Maharashtra (411014)</small>
+                        <small>Office No: 1, First Floor,
+                            Surabhi Complex, Chandan Nagar,
+                            Kharadi, Pune, Maharashtra (411014)</small>
                     </div>
                 </div>
             </div>
@@ -71,10 +77,12 @@
     <div class="container-fluid">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
+                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
                     <div class="navbar-nav w-100">
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Web Design <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <a href="#" class="nav-link" data-toggle="dropdown">Web Design <i
+                                    class="fa fa-angle-down float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
                                 <a href="" class="dropdown-item">HTML</a>
                                 <a href="" class="dropdown-item">CSS</a>
@@ -98,16 +106,16 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
- 
                             <div class="nav-item dropdown">
-                                <a href="course.html" class="nav-link dropdown-toggle">Courses</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Courses</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="Web-Designing.html" class="dropdown-item">Web Designing</a>
                                     <a href="Full-Stack-Development.html" class="dropdown-item">Full Stack Development</a>
                                     <a href="Android-Development.html" class="dropdown-item">Android Development</a>
                                     <a href="Digital-Marketing.html" class="dropdown-item">Digital Marketing</a>
+                                    <a href="Database-System.html" class="dropdown-item">Database System</a>
                                     <a href="Software-Testing.html" class="dropdown-item">Software Testing</a>
                                     <a href="Python-Development.html" class="dropdown-item">Python Development</a>
                                     <a href="MERN-Stack-Development.html" class="dropdown-item">MERN Stack Development</a>
@@ -115,11 +123,13 @@
                                     <a href="RPA.html" class="dropdown-item">RPA</a>
                                 </div>
                             </div>
-                            
                             <a href="upcoming-batches.html" class="nav-item nav-link">Upcoming Batches</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog List</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="blog.html" class="dropdown-item">Blog List</a>
+                                    <a href="single.html" class="dropdown-item">Blog Detail</a>
+                                </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
@@ -129,9 +139,10 @@
             </div>
         </div>
     </div>
+    
     <!-- Navbar End -->
 
-    <!-- Category Start -->
+ <!-- Category Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-5">
@@ -142,7 +153,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="Web-Designing.html">
                             <h4 class="text-white font-weight-medium">Web Designing</h4>
                             <!-- <span>100 Courses</span> --> 
                         </a>
@@ -151,7 +162,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="full-stack-development.html">
                             <h4 class="text-white font-weight-medium">Full Stack Development</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -161,7 +172,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="Android-Development.html">
                             <h4 class="text-white font-weight-medium">Android Development</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -170,7 +181,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-5.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="Digital-Marketing.html">
                             <h4 class="text-white font-weight-medium">Digital Marketing</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -179,7 +190,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-6.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="Software-Testing.html">
                             <h4 class="text-white font-weight-medium">Software Testing</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -188,7 +199,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-7.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="Python-Development.html">
                             <h4 class="text-white font-weight-medium">Python Development</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -197,7 +208,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-8.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="MERN-Stack-Development.html">
                             <h4 class="text-white font-weight-medium">MERN Stack Development</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -206,7 +217,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-8.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="SQL.html">
                             <h4 class="text-white font-weight-medium">SQL</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -215,7 +226,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/cat-8.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
+                        <a class="cat-overlay text-white text-decoration-none" href="RPA.html">
                             <h4 class="text-white font-weight-medium">RPA</h4>
                             <!-- <span>100 Courses</span> -->
                         </a>
@@ -243,7 +254,7 @@
                                 <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Web design & development courses for beginner</a>
+                            <a class="h5" href="Web-Designing.html">Web design & development courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -261,7 +272,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Full Stack Development courses for beginner</a>
+                            <a class="h5" href="full-stack-development.html">Full Stack Development courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -280,7 +291,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Software Testing (Manual + Automation) courses for beginner</a>
+                            <a class="h5" href="Software-Testing.html">Software Testing (Manual + Automation) courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -298,7 +309,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Android Development courses for beginner</a>
+                            <a class="h5" href="Android-Development.html">Android Development courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -316,7 +327,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Digital Marketing courses for beginner</a>
+                            <a class="h5" href="Digital-Marketing.html">Digital Marketing courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -334,7 +345,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">Python Development courses for beginner</a>
+                            <a class="h5" href="Python-Development.html">Python Development courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -352,7 +363,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">MERN Stack development courses for beginner</a>
+                            <a class="h5" href="MERN-Stack-Development.html">MERN Stack development courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -370,7 +381,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">SQL Databases courses for beginner</a>
+                            <a class="h5" href="SQL.html">SQL Databases courses for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -388,7 +399,7 @@
                                    <small class="m-0"><i class="fa fa-users text-primary mr-2"></i> Students</small>
                                 <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                             </div>
-                            <a class="h5" href="">RPA(Robotic Process Automation) for beginner</a>
+                            <a class="h5" href="RPA.html">RPA(Robotic Process Automation) for beginner</a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
@@ -405,7 +416,7 @@
 
 
     <!-- Footer Start -->
-    <div class="footer">
+   <div class="footer">
         <div class="footer-container">
             <div class="contact-info">
                 <h5 class="footer-title">Get In Touch</h5>
@@ -451,7 +462,7 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-left">
-                <p>&copy;Copyright 2024 SKILLUP. All Rights Reserved.</p>
+                <p>&copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by <a href="https://www.fouriseindia.com/">Fourise Software Solution Pvt. Ltd. </a></p>
             </div>
             <div class="footer-bottom-right">
                 <ul>
@@ -471,13 +482,8 @@
 
 
     <!-- JavaScript Libraries -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!-- jQuery (necessary for hover functionality with jQuery) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Bootstrap 5 JS (dropdown functionality) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 

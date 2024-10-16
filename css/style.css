@@ -11152,12 +11152,12 @@ h6,
 }
 
 /* Show dropdown menu on hover */
-.nav-item.dropdown:hover .dropdown-menu {
+/* .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0%;
-}
+} */
 
 /* Keep the toggle active on hover */
-.nav-item.dropdown:hover .nav-link {
-  color: #007bff; /* Change this to your desired color */
-}
+/* .nav-item.dropdown:hover .nav-link {
+  color: #007bff; 
+} */
