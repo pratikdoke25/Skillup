@@ -16,7 +16,7 @@
     margin: 5% auto;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 50%; /* Default width for desktop */
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Align items at the top */
@@ -52,7 +52,6 @@ h2 {
     width: 32px; /* Increase icon size */
     height: auto; /* Maintain aspect ratio */
 }
-
 
 form {
     margin-top: 10px;
@@ -120,35 +119,34 @@ form button:hover {
 .close:focus {
     color: black;
 }
+
 /* Responsive design *//* Mobile View - Adjustments for screens smaller than 480px */
 @media (max-width: 480px) {
     /* Adjust modal content for smaller screens */
     .modal-content {
-        width: 95%; /* Almost full width */
+        width: 95%; /* Almost full width for mobile */
         padding: 8px; /* Less padding */
         flex-direction: column; /* Stack content vertically */
-        margin: 10% auto; /* Increase top margin */
+        margin: 10% auto; /* Center modal vertically */
         box-shadow: none; /* Remove shadow for a cleaner look */
     }
 
     /* Adjust left section (form) for mobile */
     .left-section {
-        width: 80%; /* Reduce width for the form section further */
+        width: 100%; /* Ensure the form section takes full width */
         margin: 0; /* Remove margin to ensure it fits well */
-        padding-left: 0; /* Eliminate left padding */
-        padding-right: 5px; /* Reduce right padding slightly */
     }
 
     /* Adjust right section (image) for mobile */
     .right-section {
-        width: 80%; /* Reduce width for the image section */
+        width: 100%; /* Full width for the image section */
         justify-content: center; /* Center the image */
         margin: 10px auto; /* Center the right section */
     }
 
     /* Resize the image in the right section */
     .right-section img {
-        width: 60%; /* Further reduce the image size */
+        width: 80%; /* Further reduce the image size for mobile */
         margin: 0 auto; /* Center the image */
         display: block;
         border-radius: 8px; /* Maintain border radius */
@@ -165,24 +163,23 @@ form button:hover {
     form input, form select {
         padding: 6px; /* Less padding for inputs */
         margin: 4px 0; /* Consistent spacing between inputs */
-        font-size: 12px; /* Smaller font for better fit */
+        font-size: 14px; /* Smaller font for better fit */
     }
 
     /* Adjust button size */
     form button {
         padding: 6px; /* Less padding for buttons */
-        font-size: 12px; /* Smaller font size for buttons */
+        font-size: 14px; /* Smaller font size for buttons */
     }
 
     /* Ensure the WhatsApp button fits well on small screens */
     .whatsapp-btn {
-        font-size: 12px; /* Smaller text */
-        padding: 6px; /* Less padding */
-        gap: 6px; /* Smaller gap between text and icon */
-        justify-content: center; /* Center content */
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px; /* Less padding for mobile */
+        gap: 8px; /* Smaller gap for mobile */
+        white-space: normal; /* Allow text to wrap */
     }
 
-    /* Resize WhatsApp icon for mobile */
     .whatsapp-icon {
         width: 20px; /* Smaller icon */
     }
