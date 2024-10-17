@@ -13,7 +13,7 @@
 /* Modal content */
 .modal-content {
     background-color: #fff;
-    margin: 5% auto;
+    margin: 8% auto;
     padding: 20px;
     border-radius: 10px;
     width: 50%; /* Default width for desktop */
@@ -125,7 +125,7 @@ form button:hover {
     /* Adjust modal content for smaller screens */
     .modal-content {
         width: 95%; /* Almost full width for mobile */
-        padding: 8px; /* Less padding */
+        padding: 5px; /* Less padding */
         flex-direction: column; /* Stack content vertically */
         margin: 10% auto; /* Center modal vertically */
         box-shadow: none; /* Remove shadow for a cleaner look */
@@ -134,7 +134,8 @@ form button:hover {
     /* Adjust left section (form) for mobile */
     .left-section {
         width: 100%; /* Ensure the form section takes full width */
-        margin: 0; /* Remove margin to ensure it fits well */
+       padding-left: 5px;
+       margin-left: 5px;
     }
 
     /* Adjust right section (image) for mobile */
