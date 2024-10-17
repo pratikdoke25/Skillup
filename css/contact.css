@@ -50,6 +50,7 @@
 /* Contact form styling */
 .contact-form {
     margin-top: 30px;
+    
 }
 
 .contact-field input,
@@ -183,11 +184,10 @@
     margin-right: 10px;
 }
 
-
 /* Mobile view adjustments */
 @media (max-width: 768px) {
     .contact-area {
-        padding: 60px 20px; /* Reduced padding for mobile */
+        padding: 60px 10px; /* Reduced padding for mobile */
     }
 
     .section-title h1 {
@@ -204,6 +204,7 @@
     .contact-bg02 {
         padding: 20px; /* Reduced padding */
         margin-bottom: 30px; /* Added spacing for mobile stacking */
+        width: 100%; /* Ensure full width on mobile */
     }
 
     .contact-area iframe {
@@ -249,7 +250,7 @@
 /* Extra small mobile devices (like iPhone SE or smaller screens) */
 @media (max-width: 480px) {
     .contact-area {
-        padding: 40px 15px; /* Further reduced padding for extra small devices */
+        padding: 40px 5px; /* Further reduced padding for extra small devices */
     }
 
     .section-title h1 {
@@ -259,6 +260,7 @@
 
     .contact-bg02 {
         padding: 15px; /* Further reduced padding */
+        width: 100%; /* Ensure full width */
     }
 
     .contact-area iframe {
