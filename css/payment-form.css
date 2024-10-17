@@ -284,3 +284,17 @@ input[type="text"]:focus {
     color: #2C3E50;
     font-size: 18px;
 }
+
+@media (max-width: 767px) {
+    .page-header .container {
+        text-align: left; /* Align text to the left */
+    }
+
+    .page-header h3 {
+        text-align: left; /* Align the heading to the left */
+    }
+
+    .page-header .d-inline-flex {
+        justify-content: flex-start; /* Align breadcrumb navigation to the left */
+    }
+}

@@ -10617,54 +10617,49 @@ h6,
 
   .eventWrapper h3 {
     font-size: 20px; /* Smaller font size for mobile */
-  }
+}
 
-  .table th,
-  .table td {
+.table th,
+.table td {
     font-size: 14px; /* Smaller font size for mobile */
     padding: 10px; /* Adjust padding for mobile */
-  }
+}
 
-  /* Stack table cells vertically on smaller screens */
-  .table,
-  .table tbody,
-  .table tr,
-  .table td {
+/* Stack table cells vertically on smaller screens */
+.table,
+.table tbody,
+.table tr,
+.table td {
     display: block; /* Change display to block */
     width: 100%; /* Full width */
     border: none; /* Remove borders for better readability */
-  }
+}
 
-  .table thead {
+.table thead {
     display: none; /* Hide the header on small screens */
-  }
+}
 
-  .table tr {
+.table tr {
     margin-bottom: 15px; /* Space between rows */
     border: 1px solid #dee2e6; /* Add border around rows */
     border-radius: 4px; /* Rounded corners for rows */
     background-color: #ffffff; /* White background for each row */
     position: relative; /* Position relative for better layout */
-  }
+}
 
-  .table td {
-    text-align: right; /* Align text to the right */
+.table td {
+    text-align: left; /* Align text to the left */
     padding: 10px; /* Adjust padding */
     position: relative; /* Position relative for pseudo-element */
-  }
+}
 
-  .table td::before {
+.table td::before {
     content: attr(data-label); /* Show header name as label */
     position: absolute; /* Position absolutely */
     left: 10px; /* Adjust left position */
     font-weight: bold; /* Bold for labels */
     color: #6c757d; /* Label color */
     text-align: left; /* Align label text to the left */
-  }
 }
 
-
-/* Custom CSS for dropdown on hover */
-/* .navbar-nav .dropdown:hover .dropdown-menu {
-  display: block;
-} */
+}
