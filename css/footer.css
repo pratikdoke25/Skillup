@@ -132,9 +132,35 @@ button:hover {
         text-align: left;
     }
     
-    .footer-bottom-right ul {
-        flex-direction: column; /* Stack links vertically */
+    .footer-bottom-right {
+        display: flex; /* Enable flexbox for the footer */
+        justify-content: flex-start; /* Align items to the start */
     }
+    
+    .footer-bottom-right ul {
+        display: flex; /* Enable flexbox for the ul */
+        flex-direction: column; /* Stack links vertically */
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+    
+    .footer-bottom-right ul li {
+        margin: 0; /* Reset margin for list items */
+        padding: 0; /* Reset padding for list items */
+        text-align: left; /* Ensure text is aligned to the left */
+    }
+    
+    .footer-bottom-right ul li a {
+        text-decoration: none; /* Remove underline from links */
+
+        padding: -10px -10; /* Optional: Add vertical padding for spacing */
+        display: block; /* Makes the entire area clickable */
+    }
+    .footer-bottom-right ul li a {
+        padding: -10px 0; /* Further reduce vertical padding for tighter spacing */
+    }
+    
     .input-container {
         flex-direction: column; /* Stack input and button vertically on mobile */
     }
