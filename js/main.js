@@ -44,3 +44,19 @@
     
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the current URL path
+    const currentPath = window.location.pathname.split('/').pop();
+
+    // Select all nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        // Check if the link's href matches the current path
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active'); // Add active class to the matching link
+        } else {
+            link.classList.remove('active'); // Ensure other links do not have active class
+        }
+    });
+});

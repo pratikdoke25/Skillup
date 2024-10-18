@@ -478,7 +478,7 @@ hr {
 small,
 .small {
   font-size: 80%;
-  font-weight: 400;
+  font-weight:600;
 }
 
 mark,
@@ -3213,7 +3213,7 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #16181b;
+  color: #FF6600;
   text-decoration: none;
   background-color: #f8f9fa;
 }
@@ -10052,6 +10052,7 @@ h5,
 h6,
 .font-weight-medium {
   font-weight: 500 !important;
+  text-align: center;
 }
 
 .btn-square {
@@ -10189,6 +10190,7 @@ h6,
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  margin-top: 0px;
 }
 
 .bg-registration {
@@ -10287,6 +10289,7 @@ h6,
   margin-right: 18px;
   margin-left: 10px; /* Standard left margin for desktop */
   width: 98%;
+  margin-top: -30px;
 }
 
 /* General Styling */
@@ -10691,12 +10694,7 @@ h6,
 }
 
 /* Text next to the logo */
-.logo-text {
-  font-size: 20px; /* Larger text for readability */
-  font-weight: 600; /* Bold font */
-  color: #003366; /* Dark blue color for the text */
-  white-space: nowrap; /* Prevent text from wrapping */
-}
+
 
 /* Hover effect for the logo */
 .logo-container a:hover .logo-image {
@@ -10721,3 +10719,21 @@ h6,
   }
 }
 
+/* Separate text styling */
+.separate-logo-text {
+  font-size: 26px; /* Increased font size for better readability */
+  font-weight: 700; /* Increased font weight for emphasis */
+  color: #003366; /* Dark blue color */
+  text-align: center; /* Center the text horizontally */
+  margin-top: 10px; /* Top margin set to 10px */
+  padding: 10px; /* Padding for spacing */
+  margin-bottom: -20px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .separate-logo-text {
+      font-size: 22px; /* Slightly smaller font size for mobile */
+      /* Keep margin-top at 10px */
+  }
+}

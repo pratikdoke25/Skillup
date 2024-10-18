@@ -58,7 +58,7 @@ input[type="email"] {
     border: none;
     border-radius: 5px;
     margin-right: 10px; /* Space between input and button */
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.2); */
     color: white;
     font-size: 16px; /* Larger font for readability */
     min-width: 0; /* Prevent input from overflowing */
@@ -92,6 +92,7 @@ button:hover {
 .footer-bottom-left {
     text-align: left;
     margin-bottom: 15px;
+    color: aliceblue;
 }
 
 .footer-bottom-right {

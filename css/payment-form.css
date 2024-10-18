@@ -224,6 +224,7 @@ section {
 h1 {
     text-align: center;
     color: #2C3E50;
+    padding-top: 10px;
 }
 
 .bank-details {
