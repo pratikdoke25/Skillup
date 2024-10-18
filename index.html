@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,9 +33,15 @@
     <div class="container-fluid d-none d-lg-block">
         <div class="row align-items-center py-4 px-xl-5">
             <div class="col-lg-3">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0"><span class="text-primary">S</span>KILLUP corporate training center</h1>
-                </a>
+                <div class="logo-container">
+                    <a href="#" class="text-decoration-none">
+                        <img src="./img/logo/logo-skillup-rm.png" alt="SkillUp Logo" class="logo-image">
+                        <div class="logo-text">Corporate Training Center</div> <!-- Text below the logo -->
+                    </a>
+                </div>
+                
+                
+                
             </div>
             <div class="col-lg-3 text-right">
                 <div class="d-inline-flex align-items-center">
@@ -76,10 +82,27 @@
             <div class="form-container">
                 <div class="left-section">
                     <h2>Get in touch with us</h2>
-                    <button class="whatsapp-btn">
-                        <span>Contact On whatsapp</span>
+                    <button class="whatsapp-btn" onclick="sendWhatsAppMessage()">
+                        <span>Contact On WhatsApp</span>
                         <img src="./img/whatsapp.133ab902.png" alt="WhatsApp" class="whatsapp-icon">
                     </button>
+                    
+                    <script>
+                    function sendWhatsAppMessage() {
+                        // Replace 'PHONE_NUMBER' with the recipient's phone number (include country code without '+')
+                        // Example: 911234567890 for a phone number in India
+                        var phoneNumber = '9227605805';
+                        
+                        // Replace 'MESSAGE' with the message you want to pre-fill
+                        var message = encodeURIComponent("Hello! I'm interested in your services.");
+                    
+                        // Open WhatsApp using wa.me URL
+                        var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+                        
+                        window.open(whatsappURL, '_blank');
+                    }
+                    </script>
+                    
                     
                     
                     <p style="margin-top: 15px;margin-bottom: -10;">OR</p>
@@ -622,7 +645,7 @@
                                 positivity is. That will help you lifetime and your life will be changed</h4>
                             <img class="img-fluid mx-auto mb-3" src="./img/Students/3.jpeg" alt="">
                             <h5 class="m-0">Sudhir Patil</h5>
-                            <span>MERN Stack Developer</span>
+                            <span>MERN Stack Trainer</span>
                         </div>
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
@@ -633,7 +656,7 @@
                                 Early as possible…</h4>
                             <img class="img-fluid mx-auto mb-3" src="./img/Students/4.jpeg" alt="">
                             <h5 class="m-0">Rohit Ahire</h5>
-                            <span>Flutter Developer</span>
+                            <span>Flutter Trainer</span>
                         </div>
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
@@ -644,9 +667,9 @@
                                 Because of mock interview session confidence, communication, presentation skills improve
                                 on good level.
                                 And main u will definitely get success</h4>
-                            <img class="img-fluid mx-auto mb-3" src="./img/Students/1.jpeg" alt="">
-                            <h5 class="m-0">Santoshi</h5>
-                            <span>Full-Stack Developer</span>
+                            <img class="img-fluid mx-auto mb-3" src="./img/trainer/santoshi_mam.jpeg" alt="">
+                            <h5 class="m-0">Santoshi Balasaheb Pallaye</h5>
+                            <span>Full-Stack Trainer</span>
                         </div>
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
@@ -655,9 +678,9 @@
                                 name itself velocity..it will give the speed and direction to your life….just keep in
                                 mind patience and hard work is the secret of life…
                                 Thank you sir…</h4>
-                            <img class="img-fluid mx-auto mb-3" src="./img/Students/2.jpeg" alt="">
-                            <h5 class="m-0">Pratik Doke</h5>
-                            <span>Full-Stack Developer</span>
+                            <img class="img-fluid mx-auto mb-3" src="./img/trainer/swati.jpeg" alt="">
+                            <h5 class="m-0">Swati Chaudhri</h5>
+                            <span>Soft-Skill Trainer</span>
                         </div>
                     </div>
                 </div>

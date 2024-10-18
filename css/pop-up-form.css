@@ -13,7 +13,7 @@
 /* Modal content */
 .modal-content {
     background-color: #fff;
-    margin: 8% auto;
+    margin: 5% auto;
     padding: 20px;
     border-radius: 10px;
     width: 50%; /* Default width for desktop */
@@ -124,18 +124,18 @@ form button:hover {
 @media (max-width: 480px) {
     /* Adjust modal content for smaller screens */
     .modal-content {
-        width: 95%; /* Almost full width for mobile */
-        padding: 5px; /* Less padding */
-        flex-direction: column; /* Stack content vertically */
-        margin: 10% auto; /* Center modal vertically */
-        box-shadow: none; /* Remove shadow for a cleaner look */
+        width: 92%;
+        padding: 8px;
+        flex-direction: column;
+        margin: 10% auto;
+        box-shadow: none;
+        margin-left: -1px;
     }
 
     /* Adjust left section (form) for mobile */
     .left-section {
         width: 100%; /* Ensure the form section takes full width */
-       padding-left: 5px;
-       margin-left: 5px;
+        margin: 0; /* Remove margin to ensure it fits well */
     }
 
     /* Adjust right section (image) for mobile */
@@ -171,10 +171,12 @@ form button:hover {
     form button {
         padding: 6px; /* Less padding for buttons */
         font-size: 14px; /* Smaller font size for buttons */
+        margin-left: 2px;
     }
 
     /* Ensure the WhatsApp button fits well on small screens */
     .whatsapp-btn {
+        margin-left:2px;
         font-size: 14px; /* Smaller font size for mobile */
         padding: 8px; /* Less padding for mobile */
         gap: 8px; /* Smaller gap for mobile */
@@ -195,5 +197,75 @@ form button:hover {
     .modal {
         justify-content: center; /* Center modal on screen */
         align-items: center;
+    }
+}
+/* Responsive design for mobile view (adjustments for screens smaller than 768px) */
+@media (max-width: 768px) {
+    /* Modal content - Make the form take up full width on mobile */
+    .modal-content {
+        width: 100%; /* Full width for mobile */
+        padding: 15px; /* Adjust padding */
+        margin: 20px 0 0 0; /* Add 20px margin at the top */
+        height: auto; /* Adjust height for the modal */
+        box-shadow: none; /* Remove box-shadow */
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    /* Left section (form) - Full width on mobile */
+    .left-section {
+        width: 100%; /* Ensure form section takes full width */
+        margin: 0; /* No margin for proper fitting */
+    }
+
+    /* Right section (image) - Adjust for mobile */
+    .right-section {
+        width: 100%; /* Full width for the image section */
+        justify-content: center; /* Center image */
+        margin: 10px auto; /* Center image section */
+    }
+
+    /* Resize the image */
+    .right-section img {
+        width: 80%; /* Reduce image size for mobile */
+        margin: 0 auto; /* Center image */
+    }
+
+    /* Adjust the close button size for mobile */
+    .close {
+        font-size: 22px; /* Adjust size of the close button */
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Form fields - Adjust input and select elements for mobile */
+    form input, form select {
+        padding: 10px; /* Adjust padding for input fields */
+        margin: 5px 0; /* Ensure proper spacing */
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+
+    /* Form buttons */
+    form button {
+        padding: 10px; /* Adjust padding for buttons */
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+
+    /* WhatsApp button adjustments for mobile */
+    .whatsapp-btn {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px; /* Adjust padding */
+        gap: 8px; /* Adjust gap between icon and text */
+        white-space: normal; /* Allow text to wrap on smaller screens */
+    }
+
+    /* WhatsApp icon size */
+    .whatsapp-icon {
+        width: 20px; /* Smaller icon for mobile */
+    }
+
+    /* Phone input fields - Stack vertically for mobile */
+    .phone-input {
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 5px; /* Space between fields */
     }
 }
