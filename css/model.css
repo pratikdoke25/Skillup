@@ -1,0 +1,43 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Offset by half the width and height */
+    width: 300px;
+    /* Adjust width to your preference */
+    height: auto;
+    /* Adjust height based on content */
+    background-color: rgba(30, 222, 23, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    /* Add padding for spacing */
+    border-radius: 5px;
+    /* Rounded corners */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+}
+
+h2 {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 20px;
+    /* Font size for the title */
+}
+
+.modal p {
+    margin: 10px 0 0;
+    /* Spacing for the message */
+    color: green;
+}

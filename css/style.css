@@ -10052,7 +10052,7 @@ h5,
 h6,
 .font-weight-medium {
   font-weight: 500 !important;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .btn-square {
@@ -10736,4 +10736,8 @@ h6,
       font-size: 22px; /* Slightly smaller font size for mobile */
       /* Keep margin-top at 10px */
   }
+}
+
+h4, .text-white{
+  text-align: center;
 }

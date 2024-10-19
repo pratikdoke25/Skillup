@@ -70,7 +70,6 @@ section {
 /* Button Styles */
 .btn {
     display: inline-block;
-    background-color: #3498DB; /* Soft blue */
     color: #fff; /* White text */
     padding: 10px 20px;
     border: none;
