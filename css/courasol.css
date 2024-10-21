@@ -1,0 +1,48 @@
+/* Carousel image styling */
+.carousel-item {
+    min-height: 300px;
+}
+
+.carousel-item img {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+/* Carousel indicator styling */
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.5); /* Optional: Style for indicators */
+}
+
+/* Optional: Caption Styling (if you want to use the caption) */
+/*
+.carousel-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-caption .p-5 {
+    width: 100%;
+    max-width: 900px;
+}
+
+.carousel-caption h5 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.carousel-caption a.btn {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+*/
