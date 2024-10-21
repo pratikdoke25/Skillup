@@ -26,12 +26,12 @@ section {
 /* Batch Information */
 .batch-info h2 {
     font-size: 18px;
-    color: #2C3E50; /* Updated to a dark blue-gray */
+    color: #2C3E50; /* Dark blue-gray */
 }
 
 .batch-info p {
     font-size: 14px;
-    color: #7F8C8D; /* Updated to a soft gray */
+    color: #7F8C8D; /* Soft gray */
 }
 
 /* Form Body */
@@ -54,7 +54,7 @@ section {
 
 .form-group label {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     font-weight: bold;
     margin-bottom: 5px;
     color: #2C3E50; /* Dark blue-gray */
@@ -67,14 +67,33 @@ section {
     border-radius: 4px;
 }
 
+/* Specific styling for the checkbox and its label */
+.terms {
+    display: flex;
+    flex-direction: column; /* Ensure checkbox is shown first */
+    align-items: center;
+}
+
+.terms input[type="checkbox"] {
+    margin-bottom: 10px; /* Adds space between checkbox and label text */
+}
+
+.terms label {
+    font-weight: normal; /* Adjust if needed */
+    text-align: center;
+}
+
+
 /* Button Styles */
 .btn {
     display: inline-block;
+    background-color: #3498DB; /* Soft blue */
     color: #fff; /* White text */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -95,7 +114,7 @@ section {
 }
 
 .modal-content {
-    background-color: #ffffff; /* White background */
+    background-color: #fff; /* White background */
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #ddd; /* Light gray border */
@@ -285,6 +304,18 @@ input[type="text"]:focus {
     font-size: 18px;
 }
 
+/* Responsive Bank Details */
+@media (max-width: 767px) {
+    .bank-details-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .qr-code-image {
+        max-width: 50%;
+    }
+}
+
 @media (max-width: 767px) {
     .page-header .container {
         text-align: left; /* Align text to the left */
@@ -298,3 +329,26 @@ input[type="text"]:focus {
         justify-content: flex-start; /* Align breadcrumb navigation to the left */
     }
 }
+
+.close-btn {
+    position: absolute;
+    right: 6px; /* Aligns the close button to the right */
+    top: -5px; /* Keeps the button at the top */
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .btn {
+    display: block;
+    margin: 0 auto; /* Centers the button horizontally */
+    font-size: 16px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #4CAF50; /* Optional: background color */
+    color: white; /* Optional: text color */
+    border: none; /* Optional: remove border */
+    cursor: pointer; /* Adds pointer on hover */
+  }
+  
+  .btn:hover {
+    background-color: #45a049; /* Optional: hover effect */
+  }
+  

@@ -1,0 +1,140 @@
+.enquire-button {
+    position: fixed;
+    right: 10px;
+    top: 350px;
+    background-color: #11d32d; /* Green background */
+    border-radius: 50%; /* Circular button */
+    padding: 10px; /* Padding for better clickable area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    z-index: 1000; /* Ensure it stays on top */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.enquire-form-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    background-color: white; /* White background */
+    padding: 20px; /* Padding for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1000; /* Stay on top */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width */
+    box-sizing: border-box; /* Box sizing */
+    overflow-y: auto; /* Scrollable */
+    max-height: 90vh; /* Scrollable if exceeds viewport */
+}
+
+/* Hide scrollbar but keep functionality */
+.enquire-form-container::-webkit-scrollbar {
+    width: 0; /* Hide scrollbar width */
+    background: transparent; /* Transparent background */
+}
+
+.enquire-form-container {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.close-button {
+    position: absolute; /* Positioned inside the form */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    font-size: 24px; /* Larger font size */
+    color: #ff4c4c; /* Close button color */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.close-button:hover {
+    color: #cc0000; /* Darker red on hover */
+}
+
+.enquire-form-container h2 {
+    margin-top: 0; /* No margin on top */
+}
+
+.lab {
+    display: block; /* Block elements */
+    margin: 10px 0 5px; /* Margin for spacing */
+}
+
+.input,
+.textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 10px; /* Margin below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    box-sizing: border-box; /* Box sizing */
+}
+
+.enquire-form-container input::placeholder,
+.enquire-form-container textarea::placeholder {
+    color: #999; /* Placeholder color */
+}
+
+.enquire-form-container button {
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Font size */
+    box-sizing: border-box; /* Box sizing */
+    margin-bottom: 10px; /* Margin below button */
+}
+
+.enquire-form-container button:hover {
+    background-color: #cc7b00; /* Darker orange on hover */
+}
+
+.cancel-button {
+    background-color: #ff4c4c; /* Red background */
+}
+
+.cancel-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+@media (max-width: 768px) {
+    .enquire-button {
+        top: 350px; /* Position on smaller screens */
+        right: 0px; /* Align to the right */
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .enquire-form-container {
+        width: 90%; /* Responsive width */
+        max-width: none; /* No max width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .input,
+    .textarea,
+    .enquire-form-container button {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px; /* Adjust padding */
+    }
+}
+
+.success-message {
+    position: fixed; /* Fixed position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    background-color: rgba(0, 255, 0, 0.8); /* Green background */
+    color: white; /* White text */
+    padding: 15px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    z-index: 9999; /* Stay on top */
+}

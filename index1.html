@@ -25,17 +25,81 @@
     <!-- contact pop up css -->
     <link href="./css/pop-up-form.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
-    <link href="css/enquiery.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="css/enquiery.css" rel="stylesheet">
 </head>
 
 <body>
+    
+        <div class="container-fluid d-none d-lg-block">
+            <div class="separate-logo-text">SkillUp Corporate Training Center, Pune</div>
+        </div>
+        <div class="container-fluid">
+            <div class="row border-top px-xl-5 align-items-center"> <!-- Keep this for alignment -->
+                <div class="col-lg-3 d-flex flex-column align-items-center"> <!-- Use flex-column to stack vertically -->
+                    <img src="./img/logo/fourise-logo.jpeg" alt="Fourise Logo" class="logo-image">
+                    <p class="logo-text">Empowering <span>education</span></p>
+                </div>
+                
+                <div class="col-lg-9">
+                    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                        <a href="" class="text-decoration-none d-block d-lg-none">
+                            <img src="./img/logo/fourise-logo.jpeg" alt="Fourise Logo" class="logo-image">
+                        </a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav py-0">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="about.html" class="nav-item nav-link">About</a>
+                                <a href="course.html" class="nav-item nav-link">Courses</a>
+                                <a href="upcoming-batches.html" class="nav-item nav-link">New Batches</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+   
+    
+    <!-- enqiery button start -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid d-none d-lg-block">
-        <div class="separate-logo-text">SkillUp Corporate Training Center, Pune</div>
+    <div class="enquire-button" id="enquireButton">
+        <img src="./img/whatsapp.133ab902.png" alt="WhatsApp" class="whatsapp-icon">
     </div>
-    <!-- Topbar End -->
+    
+    <div class="enquire-form-container" id="enquireFormContainer" style="display: none;">
+        
+        <form id="enquireForm" style="gap: 1px;">
+            <h2>Get in touch with us</h2>
+            
+            <label for="name" class="lab">Name:</label>
+            <input type="text" id="name" class="input" name="name" placeholder="Enter your name" required>
+            
+            <label for="email" class="lab">Email:</label>
+            <input type="email" id="email" class="input" name="email" placeholder="Enter your email" required>
+            
+            <label for="phone" class="lab">Phone Number:</label>
+            <input type="tel" id="phone" class="input" name="phone" placeholder="Enter your phone number" required pattern="\d{10}" title="Please enter a valid 10-digit phone number">
+            
+            <label for="subject" class="lab">Subject:</label>
+            <input type="text" id="subject" class="input" name="subject" placeholder="Enter the subject" required minlength="4">
+            
+            <label for="message" class="lab">Message:</label>
+            <textarea id="message" class="textarea" name="message" rows="4" placeholder="Enter your Message (Max 500 Characters)" maxlength="500" required></textarea>
+            <div id="charCount">0/500 characters</div>
+    
+            <div id="errorMessage" style="color: red; margin-bottom: 10px;"></div>
+            <button type="submit" style="background-color: #55a155;">Submit</button>
+            <button type="button" class="cancel-button" id="cancelButton" style="background-color: #d83c3c;">Cancel</button>
+        </form>
+        <div id="responseMessage"></div>
+    </div>
+    
+    
+     <!-- enqiery button end -->
     <!-- contact Pop Up form Started -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
@@ -47,130 +111,48 @@
                         <span>Contact On WhatsApp</span>
                         <img src="./img/whatsapp.133ab902.png" alt="WhatsApp" class="whatsapp-icon">
                     </button>
-
-                    <script>
-                        function sendWhatsAppMessage() {
-                            // Replace 'PHONE_NUMBER' with the recipient's phone number (include country code without '+')
-                            // Example: 911234567890 for a phone number in India
-                            var phoneNumber = '9527605805';
-
-                            // Replace 'MESSAGE' with the message you want to pre-fill
-                            var message = encodeURIComponent("Hello! I'm interested in your services.");
-
-                            // Open WhatsApp using wa.me URL
-                            var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-
-                            window.open(whatsappURL, '_blank');
-                        }
-                    </script>
-
-
-
+    
                     <p style="margin-top: 15px;margin-bottom: -10;">OR</p>
-                    <form>
+                    <form id="contact-form" onsubmit="handleSubmit(event)">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Name">
-
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+    
                         <label for="email">Email Id</label>
-                        <input type="email" id="email" name="email" placeholder="Email Id">
-
+                        <input type="email" id="email" name="email" placeholder="Email Id" required>
+    
                         <label for="course">Course</label>
-                        <select id="course" name="course">
+                        <select id="course" name="course" required>
                             <option value="" disabled selected>Select Course</option>
                             <option value="course1">Web Development</option>
                             <option value="course2">Mobile Applications</option>
-                            <option value="course2">Web Applications</option>
-                            <option value="course2">Educational Services</option>
-                            <option value="course2">Web Applications</option>
-                            <option value="course2">Educational Services</option>
-                            <option value="course2">SEO</option>
-                            <option value="course2">Social Media Marketing</option>
+                            <option value="course3">Web Applications</option>
+                            <option value="course4">Educational Services</option>
+                            <option value="course5">SEO</option>
+                            <option value="course6">Social Media Marketing</option>
                         </select>
-
+    
                         <label for="phone">Phone Number</label>
                         <div class="phone-input">
                             <select>
                                 <option value="india">🇮🇳 +91</option>
                             </select>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
-
+    
+                        <input type="hidden" name="access_key" value="4393e097-cd07-4b9c-8767-3c3ca827d1da"> <!-- Web Token -->
+    
                         <button type="submit">SUBMIT</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="./js/script.js"></script>
     <!-- Contact Pop Up form ended -->
     <!-- Navbar Start -->
-    <div class="container-fluid">
-        <div class="row border-top px-xl-5 align-items-center"> <!-- Keep this for alignment -->
-            <div class="col-lg-3 d-flex flex-column align-items-center"> <!-- Use flex-column to stack vertically -->
-                <img src="./img/logo/fourise-logo.jpeg" alt="Fourise Logo" class="logo-image">
-                <p class="logo-text">Empowering <span>education</span></p>
-            </div>
-            
-            <div class="col-lg-9">
-                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
-                        <img src="./img/logo/fourise-logo.jpeg" alt="Fourise Logo" class="logo-image">
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="course.html" class="nav-item nav-link">Courses</a>
-                            <a href="upcoming-batches.html" class="nav-item nav-link">New Batches</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Navbar End -->
-<!-- enqiery button start -->
-
-<div class="enquire-button" id="enquireButton">
-    <img src="./img/whatsapp.133ab902.png" alt="WhatsApp" class="whatsapp-icon">
-</div>
-
-<div class="enquire-form-container" id="enquireFormContainer" style="display: none;">
-    
-    <form id="enquireForm" style="gap: 1px;">
-        <h2>Get in touch with us</h2>
-        
-        <label for="name" class="lab">Name:</label>
-        <input type="text" id="name" class="input" name="name" placeholder="Enter your name" required>
-        
-        <label for="email" class="lab">Email:</label>
-        <input type="email" id="email" class="input" name="email" placeholder="Enter your email" required>
-        
-        <label for="phone" class="lab">Phone Number:</label>
-        <input type="tel" id="phone" class="input" name="phone" placeholder="Enter your phone number" required pattern="\d{10}" title="Please enter a valid 10-digit phone number">
-        
-        <label for="subject" class="lab">Subject:</label>
-        <input type="text" id="subject" class="input" name="subject" placeholder="Enter the subject" required minlength="4">
-        
-        <label for="message" class="lab">Message:</label>
-        <textarea id="message" class="textarea" name="message" rows="4" placeholder="Enter your Message (Max 500 Characters)" maxlength="500" required></textarea>
-        <div id="charCount">0/500 characters</div>
-
-        <div id="errorMessage" style="color: red; margin-bottom: 10px;"></div>
-        <button type="submit" style="background-color: #55a155;">Submit</button>
-        <button type="button" class="cancel-button" id="cancelButton" style="background-color: #d83c3c;">Cancel</button>
-    </form>
-    <div id="responseMessage"></div>
-</div>
-
-
- <!-- enqiery button end -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 mb-5">
@@ -601,6 +583,7 @@
                     <li><a href="about.html"><i class="fa fa-angle-right"></i> About</a></li>
                     <li><a href="course.html"><i class="fa fa-angle-right"></i> Courses</a></li>
                     <li><a href="upcoming-batches.html"><i class="fa fa-angle-right"></i> New Batches</a></li>
+                    <li><a href="Testimonial.html"><i class="fa fa-angle-right"></i> Testimonials</a></li>
                     <li><a href="contact.html"><i class="fa fa-angle-right"></i> Contact</a></li>
 
                 </ul>

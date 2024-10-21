@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin-top: 0;
+  margin-top: -15px;
   margin-bottom: 1rem;
 }
 
@@ -601,6 +601,7 @@ pre code {
 .container-lg,
 .container-xl {
   width: 100%;
+  margin-top: 40px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -4165,8 +4166,9 @@ input[type="button"].btn-block {
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 4px;
   margin-right: -40px;
+  margin-bottom: 20px;
 }
 
 .navbar-toggler:hover, .navbar-toggler:focus {
@@ -4181,6 +4183,8 @@ input[type="button"].btn-block {
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 575.98px) {
@@ -6415,9 +6419,9 @@ button.bg-danger:focus {
   background-color: #bd2130 !important;
 }
 
-.bg-light {
+/* .bg-light {
   background-color: #FFFFFF !important;
-}
+} */
 
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
@@ -10169,6 +10173,10 @@ h6,
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/page-header.jpg), no-repeat center center;
   background-size: cover;
 }
+.page-header1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Testimonials/Testimonials.jpg), no-repeat center center;
+  background-size: cover;
+}
 
 .cat-item img {
   transition: .5s;
@@ -10290,6 +10298,7 @@ h6,
   margin-left: 10px; /* Standard left margin for desktop */
   width: 98%;
   margin-top: -30px;
+  margin-bottom: -50px;
 }
 
 /* General Styling */
@@ -10691,6 +10700,7 @@ h6,
   max-height: 100px; /* Limit maximum height */
   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
   margin-right: 10px;
+  cursor: pointer; /* Show pointer cursor to indicate it's clickable */
 }
 
 /* Text next to the logo */
@@ -10740,4 +10750,71 @@ h6,
 
 h4, .text-white{
   text-align: center;
+}
+
+/* logo css */
+/* Logo Image Styling */
+.logo-image {
+  width: 100px;              /* Set the desired width */
+  height: auto;              /* Maintain aspect ratio */
+  margin-bottom: 10px;       /* Add space between image and text */
+  display: block;            /* Block-level to ensure stacking */
+}
+
+/* Logo Text Styling */
+.logo-text {
+  font-size: 16px;           /* Adjust the font size */
+  color: red;               /* Set a suitable color */
+  text-align: center;
+  padding-bottom: 10px;       /* Center-align the text */
+}
+.logo-text span{
+  font-size: 16px;           /* Adjust the font size */
+  color: green;               /* Set a suitable color */
+  text-align: center;        /* Center-align the text */
+}
+/* General Adjustments */
+.col-lg-3 {
+  padding-left: 0;           /* Remove extra padding on the left */
+  padding-right: 0;          /* Remove extra padding on the right */
+}
+
+
+/* Navbar Styling */
+.navbar {
+  padding-left: 0;           /* Remove default left padding */
+  padding-right: 0;          /* Remove default right padding */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;        /* Space between the nav links */
+}
+
+.border-top {
+  padding-top: 10px;         /* Adjust padding above the content */
+}
+
+/* General Container Adjustments */
+.container-fluid {
+  padding-left: 0;           /* Remove extra padding on the left */
+  padding-right: 0;          /* Remove extra padding on the right */
+}
+
+.row {
+  margin-left: 0;            /* Remove any left margin */
+  margin-right: 0;           /* Remove any right margin */
+  align-items: center;       /* Ensure logo and nav are vertically aligned */
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: auto;
+}
+
+/* Hide the logo and text on small screens */
+/* Hide the logo and text on small screens */
+@media (max-width: 768px) {
+  .col-lg-3 {
+      display: none !important; /* Use !important to ensure it's applied */
+  }
 }

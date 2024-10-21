@@ -29,6 +29,7 @@
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/contact.css" rel="stylesheet">
     <link href="css/model.css" rel="stylesheet">
+
     <!-- font aworesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -37,75 +38,22 @@
     <!-- Topbar Start -->
     <div class="container-fluid d-none d-lg-block">
         <div class="separate-logo-text">SkillUp Corporate Training Center, Pune</div>
-        <div class="row align-items-center py-4 px-xl-5">
-            <div class="col-lg-3">
-                 <div class="logo-container">
-                    <a href="#" class="text-decoration-none">
-                        <img src="./img/logo/logo-skillup.png" alt="SkillUp Logo" class="logo-image">
-                        <div class="logo-text">Corporate Training Center</div> <!-- Text below the logo -->
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Our Office</h6>
-                        <small>Office No: 1, First Floor, Surabhi Complex, Chandan Nagar, Kharadi, Pune, Maharashtra
-                            (411014)</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
-                        <small>info@fouriseindia.com</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
-                        <small>+91 9527605805</small>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
     <div class="container-fluid">
-        <div class="row border-top px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
-                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
-                    <div class="navbar-nav w-100">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Web Design <i
-                                    class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">HTML</a>
-                                <a href="" class="dropdown-item">CSS</a>
-                                <a href="" class="dropdown-item">jQuery</a>
-                            </div>
-                        </div>
-                        <a href="" class="nav-item nav-link">Apps Design</a>
-                        <a href="" class="nav-item nav-link">Marketing</a>
-                        <a href="" class="nav-item nav-link">Research</a>
-                        <a href="" class="nav-item nav-link">SEO</a>
-                    </div>
-                </nav>
+        <div class="row border-top px-xl-5 align-items-center"> <!-- Keep this for alignment -->
+            <div class="col-lg-3 d-flex flex-column align-items-center"> <!-- Use flex-column to stack vertically -->
+                <img src="./img/logo/fourise-logo.jpeg" alt="Fourise Logo" class="logo-image">
+                <p class="logo-text">Empowering <span>education</span></p>
             </div>
+            
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
-                        <h1 class="m-0"><span class="text-primary">S</span>KILLUP</h1>
+                        <img src="./img/logo/fourise-logo.jpeg" alt="Fourise Logo" class="logo-image">
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -115,7 +63,7 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="course.html" class="nav-item nav-link">Courses</a>
-                            <a href="upcoming-batches.html" class="nav-item nav-link">Up Coming Batches</a>
+                            <a href="upcoming-batches.html" class="nav-item nav-link">New Batches</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
@@ -135,7 +83,7 @@
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">About</p>
+                    <p class="m-0 text-uppercase">Contact</p>
                 </div>
             </div>
         </div>
@@ -245,7 +193,8 @@
                     <li><a href="index.html"><i class="fa fa-angle-right"></i> Home</a></li>
                     <li><a href="about.html"><i class="fa fa-angle-right"></i> About</a></li>
                     <li><a href="course.html"><i class="fa fa-angle-right"></i> Courses</a></li>
-                    <li><a href="upcoming-batches.html"><i class="fa fa-angle-right"></i> Up Coming Batches</a></li>
+                    <li><a href="upcoming-batches.html"><i class="fa fa-angle-right"></i> New Batches</a></li>
+                    <li><a href="Testimonial.html"><i class="fa fa-angle-right"></i> Testimonials</a></li>
                     <li><a href="contact.html"><i class="fa fa-angle-right"></i> Contact</a></li>
 
                 </ul>
@@ -306,6 +255,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
