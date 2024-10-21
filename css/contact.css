@@ -81,6 +81,7 @@
 .slider-btn {
     text-align: center;
     margin-top: 15px; /* Reduced margin for better spacing */
+    padding-bottom: 20px;
 }
 
 /* Button styles */
@@ -281,6 +282,7 @@
     .slider-btn button {
         padding: 8px 15px; /* Reduced padding */
         font-size: 12px; /* Smaller font size */
+        margin-top: -70px;
     }
 
     .modal-content {

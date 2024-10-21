@@ -46,18 +46,21 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     // Get the current URL path
-    const currentPath = window.location.pathname.split('/').pop();
+    const currentPath = window.location.pathname.split('/').pop().toLowerCase();
 
     // Select all nav links
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
+    // Loop through each nav link
     navLinks.forEach(link => {
-        // Check if the link's href matches the current path
-        if (link.getAttribute('href') === currentPath) {
+        // Get the href attribute and convert it to lowercase
+        const linkPath = link.getAttribute('href').toLowerCase();
+
+        // Check if the href matches the current path
+        if (linkPath === currentPath) {
             link.classList.add('active'); // Add active class to the matching link
         } else {
             link.classList.remove('active'); // Ensure other links do not have active class
         }
     });
 });
-
