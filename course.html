@@ -34,6 +34,42 @@
         <div class="separate-logo-text">SkillUp Corporate Training Center, Pune</div>
     </div>
     <!-- new navbar started -->
+       <!-- enqiery button start -->
+
+    <div class="enquire-button" id="enquireButton">
+        <img src="./img/whatsapp.133ab902.png" alt="WhatsApp" class="whatsapp-icon">
+    </div>
+    
+    <div class="enquire-form-container" id="enquireFormContainer" style="display: none;">
+    
+        <form id="enquireForm" style="gap: 1px;">
+            <h2>Get in touch with us</h2>
+            
+            <label for="name" class="lab">Name:</label>
+            <input type="text" id="name" class="input" name="name" placeholder="Enter your name" required>
+            
+            <label for="email" class="lab">Email:</label>
+            <input type="email" id="email" class="input" name="email" placeholder="Enter your email" required>
+            
+            <label for="phone" class="lab">Phone Number:</label>
+            <input type="tel" id="phone" class="input" name="phone" placeholder="Enter your phone number" required pattern="\d{10}" title="Please enter a valid 10-digit phone number">
+            
+            <label for="subject" class="lab">Subject:</label>
+            <input type="text" id="subject" class="input" name="subject" placeholder="Enter the subject" required minlength="4">
+            
+            <label for="message" class="lab">Message:</label>
+            <textarea id="message" class="textarea" name="message" rows="4" placeholder="Enter your Message (Max 500 Characters)" maxlength="500" required></textarea>
+            <div id="charCount">0/500 characters</div>
+    
+            <div id="errorMessage" style="color: red; margin-bottom: 10px;"></div>
+            <button type="submit" style="background-color: #55a155;">Submit</button>
+            <button type="button" class="cancel-button" id="cancelButton" style="background-color: #d83c3c;">Cancel</button>
+        </form>
+        <div id="responseMessage"></div>
+    </div>
+    
+    
+     <!-- enqiery button end -->
     <!-- new navbar ended -->
      <!-- Navbar Start -->
     <div class="container-fluid">
