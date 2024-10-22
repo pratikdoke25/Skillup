@@ -110,7 +110,7 @@
         <div class="row border-top px-xl-5 align-items-center"> <!-- Keep this for alignment -->
             <div class="col-lg-3 d-flex flex-column align-items-center"> <!-- Use flex-column to stack vertically -->
                 <img src="./img/logo/fourise-logo.jpeg" alt="Fourise Logo" class="logo-image">
-                <p class="logo-text" style="margin-top: -10px;">Empowering <span>education</span></p>
+                <p class="logo-text" style="margin-top: -10px;">Empowering <span>carrier</span></p>
             </div>
             
             <div class="col-lg-9">
@@ -144,7 +144,6 @@
 </div>
 
 <div class="enquire-form-container" id="enquireFormContainer" style="display: none;">
-    
     <form id="enquireForm" style="gap: 1px;">
         <h2>Get in touch with us</h2>
         
@@ -157,18 +156,22 @@
         <label for="phone" class="lab">Phone Number:</label>
         <input type="tel" id="phone" class="input" name="phone" placeholder="Enter your phone number" required pattern="\d{10}" title="Please enter a valid 10-digit phone number">
         
-        <label for="subject" class="lab">Subject:</label>
-        <input type="text" id="subject" class="input" name="subject" placeholder="Enter the subject" required minlength="4">
-        
         <label for="message" class="lab">Message:</label>
         <textarea id="message" class="textarea" name="message" rows="4" placeholder="Enter your Message (Max 500 Characters)" maxlength="500" required></textarea>
         <div id="charCount">0/500 characters</div>
-
+    
         <div id="errorMessage" style="color: red; margin-bottom: 10px;"></div>
+        <input type="hidden" name="access_key" value="4393e097-cd07-4b9c-8767-3c3ca827d1da"> <!-- Added access_key here -->
         <button type="submit" style="background-color: #55a155;">Submit</button>
         <button type="button" class="cancel-button" id="cancelButton" style="background-color: #d83c3c;">Cancel</button>
     </form>
     <div id="responseMessage"></div>
+</div>
+
+
+    
+    
+    
 </div>
 
 
@@ -661,7 +664,7 @@
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
     <script src="js/enqiery.js"></script>
 </body>
 

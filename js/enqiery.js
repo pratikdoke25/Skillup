@@ -21,77 +21,86 @@
 
     // Form submission handling
     document.getElementById('enquireForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var formData = new FormData(this);
-
-        // Validate form fields
+        event.preventDefault(); // Prevent default form submission
+    
+        var form = this;
+        var formData = new FormData(form);
         var errorMessage = document.getElementById('errorMessage');
         errorMessage.innerText = '';
-
+    
         var fieldsValid = true;
-        var fields = ['name', 'subject', 'message'];
-        var phoneInput = document.getElementById('phone');
-        var phoneValue = phoneInput.value;
-        var emailInput = document.getElementById('email');
-        var emailValue = emailInput.value;
-
+        var fields = ['name', 'message']; // Ensure 'subject' exists in the form
+        var phoneValue = document.getElementById('phone').value;
+        var emailValue = document.getElementById('email').value;
+    
         // Regular expressions for validation
         var startsWithLetter = /^[A-Za-z]/; // Starts with a letter
         var containsNumbers = /\d/; // Contains numbers
         var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-        // Validate name, subject, and message
+    
+        // Validate name and message
         fields.forEach(function(field) {
             var value = formData.get(field);
-            if (field === 'subject' && value.length < 4) {
-                errorMessage.innerText += 'Subject must be at least 4 characters long.\n';
+            if (!value) {
+                errorMessage.innerText += field.charAt(0).toUpperCase() + field + ' is required.\n';
                 fieldsValid = false;
-            } else if (!startsWithLetter.test(value) || containsNumbers.test(value)) {
+                return; // Exit early if field is empty
+            }
+            if (!startsWithLetter.test(value) || containsNumbers.test(value)) {
                 errorMessage.innerText += field.charAt(0).toUpperCase() + field.slice(1) + ' must start with a letter and cannot contain numbers.\n';
                 fieldsValid = false;
             }
+        });        
+        // If any field is invalid, stop further processing
+        if (!fieldsValid) {
+            return;
+        }
+
+        // Handle successful validation and submission
+        const accessKeyInput = form.querySelector('input[name="access_key"]');
+        if (!accessKeyInput) {
+            errorMessage.textContent = "Error: Form must include an 'access_key' field. Visit Docs for help.";
+            return;
+        }
+
+        // Get input values
+        const name = formData.get('name').trim();
+        const email = emailValue.trim();
+        const phone = phoneValue.trim();
+        const message = formData.get('message').trim();
+        const accessKey = accessKeyInput.value.trim(); // Access key from the form
+
+        const submissionData = {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+            access_key: accessKey // Include access key in the request
+        };
+
+        fetch('https://api.web3forms.com/submit', { // Replace with your actual API endpoint
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(submissionData)
+        })
+        .then(async (response) => {
+            if (response.ok) { // Check if the response is successful
+                console.log("Form submitted successfully");
+                alert('Thank you! Your message has been sent.');
+                sendWhatsAppMessage(name, phone, message); // Send WhatsApp message
+                form.reset(); // Reset the form fields
+            } else {
+                const errorData = await response.json();
+                console.error('Error:', errorData.message || 'Failed to send message');
+                alert('Error: ' + (errorData.message || 'Failed to send message'));
+            }
+        })
+        .catch((error) => {
+            console.error("Something went wrong!", error);
+            alert("An error occurred while submitting the form.");
         });
-
-        // Validate phone number
-        if (!/^\d{10}$/.test(phoneValue)) {
-            errorMessage.innerText += 'Please enter a valid 10-digit phone number.\n';
-            fieldsValid = false;
-        }
-
-        // Validate email
-        if (!emailPattern.test(emailValue)) {
-            errorMessage.innerText += 'Please enter a valid email address.\n';
-            fieldsValid = false;
-        }
-
-        // If all fields are valid, submit the form
-        if (fieldsValid) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'submit.php', true);
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    if (response.success) {
-                        // Show success message in pop-up box
-                        var successMessage = document.createElement('div');
-                        successMessage.classList.add('success-message');
-                        successMessage.innerText = response.message;
-                        document.body.appendChild(successMessage);
-                        setTimeout(function() {
-                            successMessage.remove();
-                        }, 5000); // Remove the success message after 5 seconds
-
-                        // Reset form
-                        document.getElementById('enquireForm').reset();
-                        document.getElementById('charCount').textContent = '0/500 characters'; // Reset character counter
-                    } else {
-                        errorMessage.innerText = 'An error occurred while submitting the form. Please try again.';
-                    }
-                } else {
-                    errorMessage.innerText = 'An error occurred while submitting the form. Please try again.';
-                }
-            };
-            xhr.send(formData);
-        }
     });
 
