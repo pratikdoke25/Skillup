@@ -50,7 +50,20 @@
                 errorMessage.innerText += field.charAt(0).toUpperCase() + field.slice(1) + ' must start with a letter and cannot contain numbers.\n';
                 fieldsValid = false;
             }
-        });        
+        });
+    
+        // Validate phone number
+        // if (!/^\d{10}$/.test(phoneValue)) {
+        //     errorMessage.innerText += 'Please enter a valid 10-digit phone number.\n';
+        //     fieldsValid = false;
+        // }
+    
+        // // Validate email
+        // if (!emailPattern.test(emailValue)) {
+        //     errorMessage.innerText += 'Please enter a valid email address.\n';
+        //     fieldsValid = false;
+        // }
+    
         // If any field is invalid, stop further processing
         if (!fieldsValid) {
             return;
