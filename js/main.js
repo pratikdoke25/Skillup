@@ -64,3 +64,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+         // Add an event listener to the subscribe button
+
+         document.getElementById('subscribeButton').addEventListener('click', function() {
+            // Get the email input value
+            var emailInput = document.getElementById('emailInput').value;
+    
+            // Check if the input is not empty
+            if (emailInput) {
+                // Show alert if the email is entered
+                alert("Subscribed to newsletter");
+                // Optional: You can also clear the input after subscription
+                document.getElementById('emailInput').value = ''; // Clear the input field
+            } else {
+                // Show alert if the input is empty
+                alert("Please enter a valid email address.");
+            }
+        });
